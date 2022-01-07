@@ -2,7 +2,7 @@
 # File: guessinggame.sh
 # Peer graded assignment for Coursera/JHU The Unix Workbench
 
-count=$(ls | wc -l)
+count=$(ls -p | grep -v / | wc -l)
 
 function correct_guess {        # One function...
     if [[ $guess -lt $count ]]          # One if statement ...
